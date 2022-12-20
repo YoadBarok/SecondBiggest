@@ -1,4 +1,4 @@
-const getSecondBiggest = require('./secondBiggest');
+import { getSecondBiggest } from './secondBiggest';
 
 
 describe("Testing on fixed values", () => {
@@ -28,12 +28,12 @@ describe("Testing on fixed values", () => {
 
 describe("Testing with random values", () => {
     test("Random test 1", () => {
-        const arr = Array.from({length: 40}, () => Math.floor(Math.random() * 40));
+        const arr = Array.from({ length: 40 }, () => Math.floor(Math.random() * 40));
         arr.sort((a, b) => b - a);
         expect(getSecondBiggest(arr)).toBe(arr[1]);
     });
     test("Random test 2", () => {
-        const arr = Array.from({length: 40}, () => Math.floor(Math.random() * 40));
+        const arr = Array.from({ length: 40 }, () => Math.floor(Math.random() * 40));
         arr.sort((a, b) => b - a);
         expect(getSecondBiggest(arr)).toBe(arr[1]);
     });

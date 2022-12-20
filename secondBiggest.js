@@ -1,4 +1,4 @@
-function getSecondBiggest(arr) {
+export function getSecondBiggest(arr) {
 
     if (!Array.isArray(arr)) {
         return "Invalid input!";
@@ -21,5 +21,3 @@ function getSecondBiggest(arr) {
     });
     return secondBiggest;
 }
-
-module.exports = getSecondBiggest;
