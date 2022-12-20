@@ -18,9 +18,17 @@ describe("Testing on fixed values", () => {
         const arr = ".";
         expect(getSecondBiggest(arr)).toBe("Invalid input!");
     });
-    test("Should return 0", () => {
+    test("Should return `Array has less than 2 elements`", () => {
+        const arr = [3];
+        expect(getSecondBiggest(arr)).toBe("Array has less than 2 elements");
+    });
+    test("Should return `Array has less than 2 elements`", () => {
         const arr = [];
-        expect(getSecondBiggest(arr)).toBe(0);
+        expect(getSecondBiggest(arr)).toBe("Array has less than 2 elements");
+    });
+    test("Should return 1", () => {
+        const arr = [1, 2];
+        expect(getSecondBiggest(arr)).toBe(1);
     })
 
 })
